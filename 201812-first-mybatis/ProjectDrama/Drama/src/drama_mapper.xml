@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace = "drama.dao.DramaMapper">
+
+<select id = "printDrama" parameterType = "int" resultType = "DramaVO">
+select * from drama
+<if test = "_parameter == 1">
+	order by title
+</if>
+<if test = "_parameter == 2">
+	order by bdate desc
+</if>
+<if test = "_parameter == 3">
+	order by ratings desc
+</if>
+<if test = "_parameter == 4">
+ 	, reply where drama.num = reply.dnum order by reply.rcmd
+</if>
+
+</select>
+
+<select id = "searchDrama" parameterType = "java.util.HashMap" resultType = "DramaVO">
+select * from drama
+<if test = "choice == 1">
+	where title like '%' || #{keyword} || '%'
+</if>
+<if test = "choice == 2">
+	where genre like '%' || #{keyword} || '%'
+</if>
+<if test = "choice == 3">
+	where cast like '%' || #{keyword} || '%'
+</if>
+<if test = "choice == 4">
+ 	where channel like '%' || #{keyword} || '%'
+</if>
+</select>
+
+<select id = "getDrama" resultType = "DramaVO" >
+select num, title from Drama
+</select>
+
+<select id = "getReply" resultType = "ReplyVO" >
+select * from Reply
+</select>
+
+</mapper>

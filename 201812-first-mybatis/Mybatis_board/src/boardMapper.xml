@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace = "board.dao.BoardMapper">
+  
+  <insert id = "insertBoard" parameterType = "boardVO">
+  insert into board (num, id, title, content)
+  values (boardseq.nextval, #{id}, #{title}, #{content})
+  </insert>
+  
+  <select id = "selectBoard" resultType = "boardVO" >
+  select * from board
+  </select>
+  
+  <delete id = "deleteBoardbyNum" parameterType = "int" >
+  delete from board where num = #{n}
+  </delete>
+  
+  <select id = "searchbyID" parameterType = "java.util.HashMap" resultType = "boardVO">
+  select num, board.id || '(' || userinfo.name || ')' as id, title, inputdate  from board, userinfo
+  where board.id = userinfo.id
+  	<if test = "type == 1">
+  		and title like '%' || #{keyword} || '%'
+	</if>
+	
+	<if test = "type == 2">
+		and content like '%' || #{keyword} || '%'
+	</if>
+	
+	<if test = "type == 3">
+		and board.id like '%' || #{keyword} || '%'
+	</if>
+  </select>
+  
+  <update id="updateBoard" parameterType = "java.util.HashMap">
+  update Board set 
+  <if test = "column == 1">
+  title = #{revise} where num = #{num}
+  </if>
+  <if test = "column == 2">
+  content =#{revise} where num = #{num}
+  </if>
+  </update>
+  
+  
+  </mapper>

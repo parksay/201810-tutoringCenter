@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+a:link { font-weight : normal; color: black; text-decoration: none;}
+a:visited { font-weight : normal; color: blue; text-decoration: none;}
+a:active { font-weight : bolder; color: red; text-decoration: none;}
+a:hover { font-weight : normal; color: blue; text-decoration: underline;}
+
+
+.menutable {margin: auto; width: 90%; border: 2px solid; color:white;}
+.menu {padding: 2px; text-align: center; width: 80px; border: 2px solid;
+text-size: 25px; font-weight: 900; color: white; background-color: #666666;}
+.banner {width : 20%; height:3%; margin: auto auto auto 5%;}
+
+
+.list { text-align: right; width: 120px; padding: 10px; font-size: 12pt; }
+.notice { color: gray; font-weight: lighter; font-size: 10pt; }
+.contract { font-size: 8px;}
+.sub { width: 60%; margin: auto; border-style:hidden;}
+.left{ margin : auto auto auto 5% ; }
+.right { margin : auto 5% auto auto ;} 
+.formtable { cellpadding : 8px; margin : auto; font-size: 12pt; border : 2px solid; width:60%}
+.logtable { align : right; }
+.schtable { align : right; background-color: #999999; }
+
+
+table { border-collapse: collapse; }
+td { border : 2px solid black; border-collapse: collapse; }
+option { align : left; font-size: 10pt; font-weight: 300;}
+select { font-size: 10pt; padding:2px;}
+input { font-size: 12px; text-align : start; padding:3px;}
+option [type="radio"] { align : top; padding: 5px; background-color : black;}

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+a:link { font-weight : normal; color: black; text-decoration: none;}
+a:visited { font-weight : normal; color: blue; text-decoration: none;}
+a:active { font-weight : bolder; color: red; text-decoration: none;}
+a:hover { font-weight : normal; color: blue; text-decoration: underline;}
+
+
+.banner { width : 20%; height:3%; margin: auto auto auto 5%;}
+
+.menu a:link { font-weight : normal; color: white; text-decoration: none;}
+.menu a:visited { font-weight : normal; color: white; text-decoration: none;}
+.menu a:active { font-weight : bolder; color: white; text-decoration: none;}
+.menu a:hover { font-weight : normal; color: white; text-decoration: underline;}
+
+
+
+.menutable {  margin: auto; width: 90%; border: 2px solid;}
+.menu { padding: 2px; text-align: center; width: 80px; border: 2px solid;
+text-size: 25px; font-weight: 900; color: white; background-color: #666666;}
+.main { width : 80%; margin : auto; border-sytle: hidden; border-sytle: none; }
+#main { border-sytle: hidden; border-sytle: none; border-color: white;}
+.maintable { margin: auto; width: 100%; border-inner: 2px; border: 2px solid;}
+.logtable {  margin: 1% 1% auto auto; padding-right: 9px; width:100%; border: 2px solid;  text-align:center; }
+.boardtable { margin: auto; width: 60%; border: 2px solid; text-align: left;}
+.windowtable {  margin: auto; width: 60%; border: 2px solid;}
+.schtable {  margin: auto; width:30%; border: 2px solid;}
+.logdiv { border: 1px solid red;}
+
+
+table { border-collapse: collapse; }
+td, th { border: 1px solid black; border-collapse:collapse; }
+
+.mainlist { text-align: left;  font-weight: 800;}
+.mainboard { background-color : #cccccc; width:50%; }
+.maintd { width : 80%;}
+.logtd { width : 15%}
+
+
+.boardnum { width: 5%;}
+.boardid { width: 7%; }
+.boardtitle {width : 40%;}
+.boarddate { width : 8%;}
+.boardhit { width : 5%;}
+.windownum { text-align : right; width : 10%; border-right-style: hidden; }
+.windowid { text-align : right; width : 10%;  border-right-style: hidden; }
+.windowtitle { font-weight : bolder; width : 10%; border-right-style: hidden; }
+.wintitle { width: 30%}
+.windowdate { text-align : right;  width : 10%; border-right-style: hidden; }
+.windowhit { text-align : right; width : 10%;  border-right-style: hidden; }
+
+
+
+.pagecategory {background-color : #cccccc; text-align : center; text-weight : bolder;} 
+.boardcontent { text-align : center; }
+
+

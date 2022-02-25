@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join form</title>
+<link href = "CssContent/joinformprac.css" rel = "stylesheet" type = "text/css">
+</head>
+<body>
+
+<table class = "logtable" >
+	<tr>
+		<td>로그인</td>
+		<td>회원가입</td>
+		<td>ID/PW 찾기</td>
+	</tr>
+</table>
+<br>
+<img src = "joinformprac/banner.jpg" align = "left"> 
+
+<table class = "schtable">
+	<tr>
+		<td> <input type = "text"> </td>
+		<td> 찾기</td>
+	</tr>
+</table>
+<br>
+<br>
+<br>
+<table class = "menutable" border = "3px" >
+<tr> 
+		<td class = "menu"> 처음으로 </td>
+		<td class = "menu"> 소개 </td>
+		<td class = "menu"> 커뮤니티 </td>
+		<td class = "menu"> 분신물센터</td>
+		<td class = "menu">	 신입위원 모집</td>
+		<td class = "menu"> 백도 이용안내</td>
+		<td class = "menu"> 사물함신청</td>
+	</tr>
+
+</table>
+<form name = "join" action = "dojawi.ac.kr" method = "post" class = "formtable">
+
+<table class= "formtable" border = "3px" >
+	<tr>
+			<td rowspan = "21"> gg</td>
+	</tr>
+	<tr>
+		<td class = "list" > 아이디 </td>
+		<td> <input type = "text" name = "id" > </td>
+	</tr>
+	<tr>
+		<td class = "list" > 비밀번호 </td>
+		<td> <input type = "password" name = "psw"> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><p class = "notice">비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다.</p></td>
+	<tr>
+		<td class = "list" > 비밀번호 확인 </td>
+		<td> <input type = "passwordconform" name = "pswconform"></td>
+	</tr>
+	<tr>
+		<td class = "list" > 이메일 주소 </td>
+		<td> <input type = "email" name = "email" > </td>
+	</tr>
+	<tr>
+		<td class = "list" > 이름 </td>
+		<td> <input type = "text" name = "name" > </td>
+	</tr>
+	<tr>
+		<td class = "list" > 성별 </td>
+		<td> <select name = "sex"> 
+	<option value = "1" selected >성별</option>
+	<option value = "2">남자</option>
+	<option value = "3">여자</option>
+</select><br> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><p class = "notice">성별에 따른 숫자를 선택해주세요.</p></td>
+	</tr>
+	<tr>
+		<td class = "list" > 생일 </td>
+		<td> <input type ="date" > </td>
+	</tr>
+	<tr>
+		<td class = "list" > 비밀번호 찾기 질문/답변 </td>
+		<td> <select name = "pswsch">
+  <option value = "1" selected> 다른 이메일 주소는? </option>
+  <option value = "2"> 나의 보물 1호는? </option>
+  <option value = "3"> 나의 출신 초등학교는? </option>
+  <option value = "4"> 나의 출신 고향은?</option>
+  <option value = "5"> 나의 이상형은? </option>
+  <option value = "6"> 어머니 성함은? </option>
+  <option value = "7"> 아버지 성함은? </option>
+  <option value = "8"> 가장 좋아하는 색깔은? </option>
+  <option value = "9"> 가장 좋아하는 음식은? </option>
+  </select></td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 답변 </td>
+  		<td> <textarea name = "pswanswer" width = "50" height = "5"> </textarea> </td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 닉네임 </td>
+  		<td>  <input type = "text" name = "nick"> </td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 학번 </td>
+  		<td> <input type = "number" name = "snum"> </td>
+  	</tr>
+  	<tr>
+  		<td></td>
+  		<td> <p class = "notice">재학생은 필수 입력란 입니다. 학생증에 기재된 학부 및 학과를 정확하게 입력해주시기 바랍니다.</p></td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 학과 </td>
+  		<td> <input type = "text" name = "major"> </td>
+  	</tr>
+  	<tr> 
+  		<td></td>
+  		<td><p class = "notice">재학생은 필수 입력란입니다. 기재 누락시 회원가입 되지 않을 수 있습니다.</p></td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 핸드폰번호 </td>
+  		<td> <input type = "number" name = "phone"> </td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 직업 </td>
+  		<td> <select name = "job">
+<option value = "1"> 선택 </option>
+<option value = "2"> 재학 </option>
+<option value = "3"> 졸업 </option>
+<option value = "4"> 외부인 </option>
+</select><br> </td>
+	</tr>
+	<tr>
+		<td class = "list" > 메일링 가입 </td>
+		<td> <input type = "radio" name = "maling" value = "yes">예<br>
+		<input type = "radio" name = "maling" value = "no" checked>아니오<br>
+	</tr>
+	<tr>
+		<td class = "list" > 쪽지 허용 </td>
+		<td> <input type = "radio" name = "msg" value = "yesall" checked>모두 허용<br>
+<input type= "radio" name = "msg" value = "only" >등록된 친구들만 허용 <br>
+<input type = "radio" name = "msg" value = "no" > 모두 금지 <br> </td>
+	</tr>
+</table>
+<button class = "left">취소</button>
+<button class = "right">등록</button>
+
+</body>
+</html>

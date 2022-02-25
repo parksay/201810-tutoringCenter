@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join form</title>
+<link href = "CssContent/catndogjoinform.css" rel = "stylesheet" type = "text/css">
+
+<script>
+
+function pswcheck() {
+	
+	var psw = document.getElementById('psw');
+	var pswconf = document.getElementById('pswconf');
+	if (psw.value != pswconf.value ) {
+		alert ('비밀번호 재입력을 확인해주세요');
+	};
+	return;
+	
+}
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+<div>
+<a href = "index.html">
+<img src = "banner.jpg" class = "banner"> 
+</a>
+</div>
+
+<table class = "menutable" color = "white">
+	<tr>
+		<td class = "menu"> <a href = "dogboard.html">강아지짤 </a></td>
+		<td class = "menu"> <a href = "dogboard.html">고양이짤 </a></td>
+		<td class = "menu"> <a href = "dogboard.html">사람 웃짤 </a></td>
+		<td class = "menu"> <a href = "dogboard.html">진지 글짤 </a></td>
+	</tr>
+</table>
+
+<br>
+
+<table class= "formtable" >
+	<tr>
+		<td class = "list" id = "id"> 아이디 </td>
+		<td> <input type = "text" name = "id" > </td>
+	</tr>
+	<tr>
+		<td class = "list" id = "psw"> 비밀번호 </td>
+		<td> <input type = "password" name = "psw"> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><p class = "notice">비밀번호는 6자리 이상이어야 하며 영문과 숫자를 반드시 포함해야 합니다.</p></td>
+	<tr>
+		<td class = "list" id = "pswconf" > 비밀번호 확인 </td>
+		<td> <input type = "passwordconform" name = "pswconform"></td>
+	</tr>
+	<tr>
+		<td class = "list" > 이메일 주소 </td>
+		<td> <input type = "email" name = "email" id = "email"> </td>
+	</tr>
+	<tr>
+		<td class = "list" > 이름 </td>
+		<td> <input type = "text" name = "name" id = "name"> </td>
+	</tr>
+	<tr>
+		<td class = "list" > 성별 </td>
+		<td> <select name = "sex" id ="sex"> 
+	<option value = "1" selected >성별</option>
+	<option value = "2">남자</option>
+	<option value = "3">여자</option>
+</select><br> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><p class = "notice">성별에 따른 숫자를 선택해주세요.</p></td>
+	</tr>
+	<tr>
+		<td class = "list" id = "birth" > 생일 </td>
+		<td> <input type ="date" > </td>
+	</tr>
+	<tr>
+		<td class = "list" > 비밀번호 찾기 질문/답변 </td>
+		<td> <select name = "pswsch">
+  <option value = "1" selected> 다른 이메일 주소는? </option>
+  <option value = "2"> 나의 보물 1호는? </option>
+  <option value = "3"> 나의 출신 초등학교는? </option>
+  <option value = "4"> 나의 출신 고향은?</option>
+  <option value = "5"> 나의 이상형은? </option>
+  <option value = "6"> 어머니 성함은? </option>
+  <option value = "7"> 아버지 성함은? </option>
+  <option value = "8"> 가장 좋아하는 색깔은? </option>
+  <option value = "9"> 가장 좋아하는 음식은? </option>
+  </select></td>
+  	</tr>
+  	<tr>
+  		<td class = "list" id= "pswasw"> 답변 </td>
+  		<td> <textarea name = "pswanswer" width = "50" height = "5"> </textarea> </td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 닉네임 </td>
+  		<td>  <input type = "text" name = "nick" id = "nick"> </td>
+  	</tr>
+  	<tr>
+  		<td class = "list" > 핸드폰번호 </td>
+  		<td> <input type = "number" name = "phone" id = "phone"> </td>
+  	</tr>
+	<tr>
+		<td class = "list" > 메일링 가입 </td>
+		<td> <input type = "radio" name = "maling" value = "yes">예<br>
+		<input type = "radio" name = "maling" value = "no" checked>아니오<br>
+	</tr>
+	<tr>
+		<td class = "list" > 쪽지 허용 </td>
+		<td> <input type = "radio" name = "msg" value = "yesall" checked>모두 허용<br>
+<input type= "radio" name = "msg" value = "only" >등록된 친구들만 허용 <br>
+<input type = "radio" name = "msg" value = "no" > 모두 금지 <br> </td>
+	</tr>
+</table>
+
+
+<div>
+<table class = "sub" >
+<tr>
+<td>
+<button class = "left" id = "cancel">취소</button>
+</td>
+<td  class = "right">
+<button id = "submit">등록</button>
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

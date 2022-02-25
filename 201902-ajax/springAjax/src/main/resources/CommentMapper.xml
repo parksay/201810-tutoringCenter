@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 어떤 namespace 이름을 가지는 공간에 채워 넣을지  -->
+<mapper namespace="global.sesoc.ajax.dao.CommentMapper">
+
+	<!-- 댓글 저장하기 -->
+	<insert id="write" parameterType="CommentVO">
+		insert into usercomment values (usercomment_seq.nextval, #{name}, #{text})
+	</insert>
+	<!-- 댓글 불러오기 -->
+	<select id="list" resultType="CommentVO">
+		select * from usercomment order by num
+	</select>
+	<!-- 댓글 삭제하기 -->
+	<delete id = "deleteComment" parameterType = "int">
+		delete from usercomment where num = #{num}
+	</delete>
+</mapper>

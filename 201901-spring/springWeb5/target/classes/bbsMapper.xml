@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 회원정보 처리 SQL -->
+<mapper namespace="global.sesoc.web5.dao.BbsMapper">
+
+	<!-- 회원 정보 저장 -->
+	<insert id="inputBbs" parameterType="BbsVO">
+		insert into bbs (boardnum, name, password, content) values
+		(bbsseq.nextval, #{name}, #{password}, #{content}) 
+	</insert>
+	
+	<select id = "getList" resultType = "BbsVO">
+		select * from bbs order by boardnum desc
+	</select>
+	
+	<delete id = "deleteBbs" parameterType = "BbsVO">
+		delete from bbs where boardnum = #{boardnum} and password like #{password}
+	</delete>
+
+	
+</mapper>

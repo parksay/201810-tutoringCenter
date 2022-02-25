@@ -1,0 +1,25 @@
+@charset "UTF-8";
+<style>
+ 
+ a:link { color : black text-decoration: none;}
+ a:hover { color : black text-decoration: underline;}
+ a:active { color : red text-decoration: line;}
+ a:visited { color : blue text-decoration: bold;}
+
+
+
+ table { align : center; }
+ 
+ table td { text-align : center; }
+
+.column { padding : 60; color: white; background-color: black; }
+.number { width : 40; }
+.id { width : 70; }
+.title { width : 100;}
+.hit { width : 60;}
+.date { width : 100;}
+.num { background : gray;}
+.notice { align :right; }
+
+
+</style>

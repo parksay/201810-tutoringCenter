@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 회원정보 처리 SQL -->
+<mapper namespace="global.sesoc.web6.dao.BoardMapper">
+
+	<!-- 회원 정보 저장 -->
+	<insert id="insert" parameterType= "BoardVO">
+		insert into board (
+			boardnum
+			, id
+			, title
+			, content 
+		<if test="originalFile != null and savedFile != null">
+			, originalfile
+			, savedfile
+		</if>
+			)
+		values ( board_seq.nextval, #{id}, #{title}, #{content} 
+		<if test="originalFile != null and savedFile != null">
+			, #{originalFile}
+			, #{savedFile}
+		</if>
+			) 
+	</insert>
+	
+	<select id= "getList" resultType = "BoardVO">
+		select * from board order by boardnum desc
+	</select>
+	
+	<select id = "getBoardVO" resultType = "BoardVO">
+		select * from board where boardnum = #{ boardnum }
+	</select>
+	
+	<select id = "getTotal" resultType = "int" parameterType = "string">
+		select count (*) from board 
+			where upper(content) like upper('%' || #{searchText} || '%')
+		order by boardnum desc
+	</select>
+	
+	<select id = "listBoard" resultType = "BoardVO" parameterType = "string">
+		select
+			boardnum
+			, id
+			, title
+			, to_char(inputdate, 'YYYY-MM-DD') inputdate
+			, hits
+		from
+			board
+			
+		where
+			upper(content) like upper('%' || #{searchText} || '%')
+		order by boardnum desc
+	
+	</select>
+	
+	<insert id = "inputReply" parameterType = "ReplyVO">
+	insert into reply (replynum, boardnum, id, text)
+	values ( reply_seq.nextval, #{boardnum}, #{id}, #{text} )
+	
+	</insert>
+	
+	<select id = "listReply" parameterType = "int" resultType = "ReplyVO">
+	select * from reply where boardnum = #{boardnum} order by replynum desc
+	</select>
+
+	<update id = "updateBoardVO" parameterType = "BoardVO">
+	update board set title = #{title}, content = #{content}, hits = #{hits} where boardnum = #{boardnum}
+	
+	</update>
+	
+</mapper>

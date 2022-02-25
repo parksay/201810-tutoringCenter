@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.menu { padding: 2px; text-align: center; width: 80px;
+font-size: 11px; font-weight: bolder; color: white; background-color: #555555;}
+ 
+.list { text-align: right; width: 120px; padding: 10px; font-size: 9px; }
+.notice { color: gray; font-weight: lighter; font-size: 7px; }
+.contract { font-size: 8px;}
+.left{align: left;}
+.right { align : right;}
+.formtable { cellpadding : 8px; align : center; font-size: 9px;}
+.logtable { align : right; }
+.schtable { align : right; background-color: #999999; }
+option { align : left; font-size: 9px; font-weight: 300;}
+select { font-size: 9px; padding:2px;}
+input { font-size: 9px; text-align : start; padding:3px;}
+option [type="radio"] { align : top; padding: 5px; background-color : black;}
